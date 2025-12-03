@@ -32,7 +32,7 @@ public class FirstClassTest {
 	        options.addArguments("--no-sandbox");
 	        options.addArguments("--disable-dev-shm-usage");
 
-	        driver = new ChromeDriver(options);
+	     WebDriver driver = new ChromeDriver(options);
 
 
 		
