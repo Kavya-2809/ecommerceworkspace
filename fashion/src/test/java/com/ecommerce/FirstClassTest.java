@@ -9,21 +9,26 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-
+@Test
 public class FirstClassTest {
-	@Test
-    public void testMethod() {
-		
+	 public void testMethod1() {
+		 
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();
-
 		driver.findElement(By.xpath("//span[contains(@class,'nav-line-2') and contains(.,'Account & Lists')]")).click();
 		driver.findElement(By.id("ap_email_login")).sendKeys("monachary8922@gmail.com");
 		//driver.findElement(By.xpath("//span[@id='continue']//input[@type='submit']")).click();
-
+	}
+	 public void testMethod2() {
+			
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+		driver.get("https://www.amazon.in");
+		driver.manage().window().maximize();
 	}
 
 }
