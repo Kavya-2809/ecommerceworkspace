@@ -1,0 +1,21 @@
+package com.ecommerce;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+@Test
+public class SecondTest {
+	
+	public void secondmenthotest() {
+	WebDriverManager.chromedriver().setup();
+	WebDriver driver = new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+	driver.get("https://www.amazon.in");
+
+}
+}
