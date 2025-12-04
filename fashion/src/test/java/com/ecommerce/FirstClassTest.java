@@ -7,13 +7,16 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
 @Test
 public class FirstClassTest {
+	
 	 public void testMethod1() {
 		 
-		WebDriverManager.chromedriver().setup();
+	WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		driver.get("https://www.amazon.in");
@@ -23,12 +26,13 @@ public class FirstClassTest {
 		//driver.findElement(By.xpath("//span[@id='continue']//input[@type='submit']")).click();
 	}
 	 public void testMethod2() {
-			
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-		driver.get("https://www.amazon.in");
-		driver.manage().window().maximize();
+	      
+	      WebDriver driver = new FirefoxDriver();
+	        driver.get("https://www.google.com");
+	        System.out.println(driver.getTitle());
+	        driver.quit();
+		
+	
 	}
 
 }
