@@ -24,7 +24,10 @@ public class FirstClassTest {
 	}
 	 public void testMethod2() {
 			
-		
+		 WebDriver driver = new FirefoxDriver();
+	        driver.get("https://www.google.com");
+	        System.out.println(driver.getTitle());
+	        driver.quit();
 	}
 
 }
