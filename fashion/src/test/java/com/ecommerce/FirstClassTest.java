@@ -24,21 +24,7 @@ public class FirstClassTest {
 	}
 	 public void testMethod2() {
 			
-		 io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
-
-	        ChromeOptions options = new ChromeOptions();
-	        
-	        options.addArguments("--disable-gpu");
-	        options.addArguments("--no-sandbox");
-	        options.addArguments("--disable-dev-shm-usage");
-
-	     WebDriver driver = new ChromeDriver(options);
-
-
 		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
-		driver.get("https://www.amazon.in");
-		driver.manage().window().maximize();
 	}
 
 }
