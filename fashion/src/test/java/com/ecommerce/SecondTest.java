@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,9 @@ public class SecondTest {
 	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
 	        driver.get("https://www.amazon.in");
+	        driver.manage().window().maximize();
+			driver.findElement(By.xpath("//span[contains(@class,'nav-line-2') and contains(.,'Account & Lists')]")).click();
+			driver.findElement(By.id("ap_email_login")).sendKeys("monachary8922@gmail.com");
 
 	        // Take screenshot
 	        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
