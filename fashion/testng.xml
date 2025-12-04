@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test name="Test">
 	  <classes>
-      <class name="com.ecommerce.FirstClassTest">
-      </class>
-    </classes>
+ 		  <class name="com.ecommerce.SecondTest"/>   
+ 	  </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
