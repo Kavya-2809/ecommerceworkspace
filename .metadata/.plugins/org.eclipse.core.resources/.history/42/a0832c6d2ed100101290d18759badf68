@@ -35,13 +35,13 @@ public class SecondTest {
 	        driver.get("https://www.amazon.in");
 	        driver.manage().window().maximize();
 			driver.findElement(By.xpath("//span[contains(@class,'nav-line-2') and contains(.,'Account & Lists')]")).click();
-			//driver.findElement(By.id("ap_email_login")).sendKeys("monachary8922@gmail.com");
+			driver.findElement(By.id("ap_email_login")).sendKeys("monachary8922@gmail.com");
 
 	        // Take screenshot
 	        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 	        // Save screenshot to local folder
-	        File destFile = new File("amazon_screenshot1.png");
+	        File destFile = new File("amazon_screenshot.png");
 	        FileUtils.copyFile(srcFile, destFile);
 
 	        System.out.println("Screenshot saved at: " + destFile.getAbsolutePath());
