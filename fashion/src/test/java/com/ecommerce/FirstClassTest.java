@@ -7,7 +7,6 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
 
@@ -26,13 +25,11 @@ public class FirstClassTest {
 		//driver.findElement(By.xpath("//span[@id='continue']//input[@type='submit']")).click();
 	}
 	 public void testMethod2() {
+
 	      
 	      WebDriver driver = new FirefoxDriver();
 	        driver.get("https://www.google.com");
 	        System.out.println(driver.getTitle());
 	        driver.quit();
-		
-	
-	}
-
+	 }	
 }
